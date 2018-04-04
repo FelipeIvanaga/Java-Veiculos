@@ -11,12 +11,12 @@ import br.edu.unicesumar.Veiculo;
  */
 public class Caminhao extends Veiculo{
     private int peso;
-    private String tipo;
+    private String tipoCarga;
     
-    public Caminhao(int peso, String tipo){
+    public Caminhao(int peso, String tipoCarga){
         super(chassi, nome, marca, modelo, anoFab, placa, cor);
         this.peso = peso;
-        this.tipo = tipo;
+        this.tipoCarga = tipoCarga;
         
     }
     
@@ -28,11 +28,11 @@ public class Caminhao extends Veiculo{
         this.peso = peso;
     }
     
-    public String getTipo(){
-        return tipo;
+    public String getTipoCarga(){
+        return tipoCarga;
     }
     
-    public void setTipo(String tipo){
-        this.tipo = tipo;
+    public void setTipoCarga(String tipoCarga){
+        this.tipoCarga = tipoCarga;
     }
 }

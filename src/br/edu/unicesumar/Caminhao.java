@@ -13,7 +13,7 @@ public class Caminhao extends Veiculo{
     private int peso;
     private String tipoCarga;
     
-    public Caminhao(int peso, String tipoCarga){
+    public Caminhao(String chassi, String nome, String marca, String modelo, int anoFab, String placa, String cor, int peso, String tipoCarga){
         super(chassi, nome, marca, modelo, anoFab, placa, cor);
         this.peso = peso;
         this.tipoCarga = tipoCarga;

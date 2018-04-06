@@ -6,6 +6,7 @@
 package br.edu.unicesumar;
 import br.edu.unicesumar.ControlarVeiculo;
 import java.util.Scanner;
+import br.edu.unicesumar.Veiculo;
 
 /**
  *
@@ -24,19 +25,52 @@ public class View {
         control.exibirTodos();
     }
     
+    public void forcarCa(){
+        Veiculo v = new Caminhao("Chassi", "nome", "marca", "modelo", 123, "placa", "cor", 123, "tipo");
+        control.inserirCaminhao(v);
+    }
     public void inserirCaminhao(){
-        dadosVeiculo();
+        
+        Veiculo a = dadosVeiculo();
+       
+        
+        
         System.out.println("Digite o peso suportado: ");
         int peso = scan.nextInt();
         System.out.println("Digite o tipo de carga: ");
         String tipo = scan.next();
         
-        Caminhao c = new Caminhao(peso, tipo);
+        Veiculo v = new Caminhao(a.chassi, a.nome, a.marca, a.modelo, a.anoFab, a.placa, a.cor, peso, tipo);
         
-        control.inserirCaminhao(c);
+        control.inserirCaminhao(v);
     }
     
-    public void dadosVeiculo(){
+    public void inserirMoto(){
+        
+        Veiculo a = dadosVeiculo();
+        System.out.println("Digite a cilindrada: ");
+        int cilindrada = scan.nextInt();
+        System.out.println("Digite o tipo da moto: ");
+        String tipoMoto = scan.next();
+        
+        Veiculo v = new Motocicleta(a.chassi, a.nome, a.marca, a.modelo, a.anoFab, a.placa, a.cor, cilindrada, tipoMoto);
+        
+        control.inserirMoto(v);
+    }
+    
+    public void inserirAutomovel(){
+        Veiculo a = dadosVeiculo();
+        System.out.println("Quantidade de portas: ");
+        int portas = scan.nextInt();
+        System.out.println("Capacidade de passageiros: ");
+        int quantPas = scan.nextInt();
+        
+        Veiculo v = new Automovel(a.chassi, a.nome, a.marca, a.modelo, a.anoFab, a.placa, a.cor, portas, quantPas);
+        
+        control.inserirAutomovel(v);
+    }
+    
+    public Veiculo dadosVeiculo(){
         System.out.println("Digite o Chassi: ");
         String chassi = scan.next();
         
@@ -57,7 +91,7 @@ public class View {
         
         System.out.println("Digite a cor: ");
         String cor = scan.next();
-        Veiculo veiculo = new Veiculo(chassi, nome, marca, modelo, anoFab, placa, cor);
-        //return(chassi, nome, marca, modelo, anoFab, placa, cor);
+        Veiculo a = new Veiculo(chassi, nome, marca, modelo, anoFab, placa, cor);
+        return(a);
     }
 }

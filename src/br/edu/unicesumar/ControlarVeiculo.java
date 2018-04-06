@@ -15,13 +15,30 @@ public class ControlarVeiculo {
     public ControlarVeiculo(){
         lista = new ArrayList<Veiculo>();
     }
-    public void inserirCaminhao(Caminhao c){
-        lista.add(c);
+    public void inserirCaminhao(Veiculo v){
+        lista.add(v);
+    }
+    
+    public void inserirMoto(Veiculo v){
+        lista.add(v);
+    }
+    
+    public void inserirAutomovel(Veiculo v){
+        lista.add(v);
     }
     
     public void exibirTodos(){
-        for(Veiculo c : lista){
-            System.out.println("Chassi" + c.getChassi());
+        
+        if(lista != null & lista.size() > 0){
+            for(int i = 0; i < lista.size(); i++){
+                Veiculo a = lista.get(i);
+                System.out.println("Chassi" + a.getChassi());
+            }
+        }
+        else{
+            System.out.println("Ta VAZIO");
         }
     }
+    
+    
 }

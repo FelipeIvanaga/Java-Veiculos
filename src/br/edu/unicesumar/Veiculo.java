@@ -10,13 +10,13 @@ package br.edu.unicesumar;
  * @author UniCesumar
  */
 public class Veiculo {
-    protected static String chassi;
-    protected static String nome;
-    protected static String marca;
-    protected static String modelo;
-    protected static int anoFab;
-    protected static String placa;
-    protected static String cor;
+    protected String chassi;
+    protected String nome;
+    protected String marca;
+    protected String modelo;
+    protected int anoFab;
+    protected String placa;
+    protected String cor;
     
     public Veiculo(String chassi, String nome, String marca, String modelo, int anoFab, String placa, String cor){
         super();

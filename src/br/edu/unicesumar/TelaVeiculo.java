@@ -5,17 +5,20 @@
  */
 package br.edu.unicesumar;
 
+import java.util.Scanner;
+
 /**
  *
  * @author UniCesumar
  */
 public class TelaVeiculo {
     
-    
-    public static void main(String[] args){
-        System.out.println("XABLAU");
-        View view = new View();
-        view.inserirCaminhao();
-        view.exibir();
+    Scanner scan = new Scanner(System.in);
+    public int menu(){
+        System.out.println("\n----------Menu----------");
+        System.out.println("0 - opcoes");
+        int opcao = scan.nextInt();
+        return opcao;
     }
+
 }

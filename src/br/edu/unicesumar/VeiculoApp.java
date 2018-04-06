@@ -39,7 +39,7 @@ public class VeiculoApp {
                     view.inserirAutomovel();
                     break;
                 case 5:
-                    //view.forcarCa();
+                    view.forcarCa();
                     view.exibir();
                     break;
                 default:

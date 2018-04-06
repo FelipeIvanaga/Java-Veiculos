@@ -27,7 +27,7 @@ public class View {
     
     public void forcarCa(){
         Veiculo v = new Caminhao("Chassi", "nome", "marca", "modelo", 123, "placa", "cor", 123, "tipo");
-        control.inserirCaminhao(v);
+        control.inserir(v);
     }
     public void inserirCaminhao(){
         
@@ -42,7 +42,7 @@ public class View {
         
         Veiculo v = new Caminhao(a.chassi, a.nome, a.marca, a.modelo, a.anoFab, a.placa, a.cor, peso, tipo);
         
-        control.inserirCaminhao(v);
+        control.inserir(v);
     }
     
     public void inserirMoto(){
@@ -55,7 +55,7 @@ public class View {
         
         Veiculo v = new Motocicleta(a.chassi, a.nome, a.marca, a.modelo, a.anoFab, a.placa, a.cor, cilindrada, tipoMoto);
         
-        control.inserirMoto(v);
+        control.inserir(v);
     }
     
     public void inserirAutomovel(){
@@ -67,7 +67,7 @@ public class View {
         
         Veiculo v = new Automovel(a.chassi, a.nome, a.marca, a.modelo, a.anoFab, a.placa, a.cor, portas, quantPas);
         
-        control.inserirAutomovel(v);
+        control.inserir(v);
     }
     
     public Veiculo dadosVeiculo(){

@@ -27,10 +27,23 @@ public class VeiculoApp {
                 case 1:
                     view.listar();
                     break;
+                case 2:
+                    view.carregarAutomovel();
+                    break;
                 case 3:
                     view.carragarMotocicleta();
+                    break;
                 case 4:
                     view.carregarCaminhao();
+                    break;
+                case 5:
+                    view.pesquisar();
+                    break;
+                case 6:
+                    opcao = 6;
+                    break;
+                default:
+                    System.out.println("\nOpção invalida");
                     break;
             }
         }

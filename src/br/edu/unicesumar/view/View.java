@@ -9,6 +9,7 @@ import br.edu.unicesumar.control.ControlaVeiculo;
 import br.edu.unicesumar.model.Caminhao;
 import br.edu.unicesumar.model.Motocicleta;
 import br.edu.unicesumar.model.Veiculo;
+import br.edu.unicesumar.model.Automovel;
 import java.util.Scanner;
 
 /**
@@ -23,7 +24,18 @@ public class View {
         control = new ControlaVeiculo();
     }
     
-    
+    public void carregarAutomovel(){
+        System.out.println("----------Automovel----------");
+        Veiculo aux = dadosVeiculo();
+        
+        System.out.print("Portas: ");
+        int portas = scan.nextInt();
+        System.out.print("Cavalos: ");
+        int cavalos = scan.nextInt();
+
+        Veiculo v = new Automovel(aux.getChassi(),aux.getPlaca(),aux.getModelo(),portas,cavalos);
+        control.inserir(v);
+    }
     
     public void carragarMotocicleta(){
         System.out.println("----------Motocicleta----------");
@@ -60,5 +72,10 @@ public class View {
     
     public void listar(){
         control.listar();
+    }
+    
+    public void pesquisar(){
+        String placa = scan.next();
+        control.pesquisar(placa);
     }
 }

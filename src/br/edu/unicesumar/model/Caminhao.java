@@ -1,37 +1,32 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.edu.unicesumar.model;
 
 /**
- *
- * @author est.faivanaga
+ * Autor: Felipe Alves Ivanaga github.com/felipeivanaga
  */
-public class Caminhao extends Veiculo{
+public class Caminhao extends Veiculo {
+
     private int peso;
     private String tipo;
-    
-    public Caminhao(String chassi, String placa, String modelo, int peso, String tipo){
-        super(chassi,placa,modelo);
+
+    public Caminhao(String chassi, String placa, String modelo, int ano, int peso, String tipo) {
+        super(chassi, placa, modelo, ano);
         this.peso = peso;
         this.tipo = tipo;
     }
-    
-    public int getPeso(){
+
+    public int getPeso() {
         return peso;
     }
-    
-    public void setPeso(int peso){
+
+    public void setPeso(int peso) {
         this.peso = peso;
     }
-    
-    public String getTipo(){
+
+    public String getTipo() {
         return tipo;
     }
-    
-    public void setTipo(String tipo){
+
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
 }

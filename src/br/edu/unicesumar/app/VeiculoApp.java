@@ -1,24 +1,23 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.edu.unicesumar.app;
 
 import br.edu.unicesumar.view.View;
 
 /**
- *
- * @author est.faivanaga
+ * Autor: Felipe Alves Ivanaga
+ * github.com/felipeivanaga
  */
 public class VeiculoApp {
     
     public static void main(String[] args){
         View view = new View();
         Tela tela = new Tela();
-        int opcao = 0;
         
-        while(opcao != 6){
+        //Variavel de controle do loop
+        boolean sair = false;
+        
+        //Loop para execusão do programa até o usuario desejar sair
+        while(sair != true){
             tela.menu();
             switch(tela.opcao()){
                 case 0:
@@ -31,23 +30,23 @@ public class VeiculoApp {
                     view.carregarAutomovel();
                     break;
                 case 3:
-                    view.carragarMotocicleta();
+                    view.carregarCaminhao();
                     break;
                 case 4:
-                    view.carregarCaminhao();
+                    view.carragarMotocicleta();
                     break;
                 case 5:
                     view.pesquisar();
                     break;
                 case 6:
-                    opcao = 6;
+                    //Muda variavel de controle para saida do loop
+                    sair = true;
                     break;
                 default:
                     System.out.println("\nOpção invalida");
                     break;
             }
         }
-        
         System.out.println("Saindo...");
     }
 }
